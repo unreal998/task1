@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import $ from "jquery" 
-import { timingSafeEqual } from "crypto";
+import $ from "jquery";
+import {BrowserRouter } from "react-router-dom";
 
 
 
@@ -40,22 +40,25 @@ class UserStats extends React.Component{
     }
 }
 
+var entered;
+
+
 class User extends React.Component{
     constructor(props){
         super(props);
         this.state = {name: this.props.name};
         this.handleClick = this.handleClick.bind(this);
     }
+
     handleSearch(event) {
-        this.setState(prevState =>({
-            name: event.target.value}));
+        entered = event.target.value;
     }
 
-   /* handleClick(){
+    handleClick(){
         this.setState(prevState =>({
-            name: "yolo"
+            name: entered
         }))
-    }*/
+    }
     render(){
         return(
         <div>
