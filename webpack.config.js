@@ -3,7 +3,7 @@ const HtmlWepbackPlugin = require("html-webpack-plugin");
 
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: ["babel-polyfill", "./src/index.js"],
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "App.js"
@@ -22,6 +22,7 @@ module.exports = {
     plugins: [
         new HtmlWepbackPlugin({
             template:"./src/index.html"
+            
         })
     ]
   }
