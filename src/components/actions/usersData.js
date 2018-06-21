@@ -3,9 +3,9 @@ import axios from 'axios';
 export function userData(user) {
 
     const request = axios.get("https://randomuser.me/api/");
-
-    dispatch (
+    console.log(request);
+    return{
         type: "GetData",
         payload: request
-    );
+    };
 }

@@ -13,7 +13,7 @@ console.log(store);
 
 ReactDOM.render(
     <Provider store = {store}>
-     <WebPage/>
+     <UserStats/>
     </Provider>,
     document.getElementById("app")
 );
