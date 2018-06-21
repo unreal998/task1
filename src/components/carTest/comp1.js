@@ -1,6 +1,6 @@
 import React from "react";
-import CarsList from "./containers/cars-list"
-import Details from "../components/containers/details"
+import CarsList from "./cars-list"
+import Details from "../carTest/details"
 
 
 const WebPage = () =>(

@@ -1,19 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {createStore} from "redux";
+import React from "react"
+import ReactDOM from "react-dom"
 import {Provider} from "react-redux";
-import allReducers from "./components/reducers";
-import UserStats from "./components/userStats"
-import WebPage from "./components/comp1";
-import babelPolyfill from 'babel-polyfill';
-
-
-const store = createStore(allReducers);
-console.log(store);
+import thunk from "redux-thunk"
+import App from "./components/App"
+import store from "./store"
 
 ReactDOM.render(
     <Provider store = {store}>
-     <UserStats/>
+        <App/>
     </Provider>,
-    document.getElementById("app")
+     document.getElementById("app")
 );
