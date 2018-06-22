@@ -11,7 +11,7 @@ class Main extends React.Component {
                 </div>
                 <div >
                     <div>
-                        <button onClick={() => this.props.changeUsername("Ann")}>Change the Username</button>
+                        <button onClick={() => this.props.changeUsername()}>Change the Username</button>
                     </div>
                 </div>
             </div>

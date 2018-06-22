@@ -2,20 +2,26 @@ import React from "react";
 import User from "./User"
 import Main from "./Main"
 import { connect } from 'react-redux';
-import {setName, Test} from "../actions/UserActions";
+import { UserData} from "../actions/UserActions";
 class App extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
     }
-    changeUsername(newName){
+    changeUsername(){
 
+    }
+    // componentDidMount(){
+    //     this.currentData = changeUsername(()=> this.props.UserData())
+    // }
+    componentDidMount(){
+        this.props.UserData()
     }
     render(){
         return(
             <div className="container">
-                <button onClick={()=>this.props.test()}></button>
-                <Main changeUsername={()=>this.props.setName("Maxim")}/>
-                <User username={this.props.user.name}/>
+                <Main changeUsername={()=>this.props.UserData()}/>
+                <User username={this.props.user.name} userage={this.props.user.age} userphoto = {this.props.user.photo}/>
+               
             </div>
         );
     }
@@ -24,20 +30,17 @@ class App extends React.Component{
 const mapStateToProps = (state) => {
     return{
         user: state.user,
-        math: state.math
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
-    console.log(Test)
+    console.log(UserData)
     return{
-        setName: (name) => {
-            dispatch(setName(name));
-        },
-        test: ()=>{
-          //  console.log("Eror:",Test)
-            dispatch(Test());
+        UserData: ()=>{
+            dispatch(UserData());
         }
     };
 };
+
+
 export default connect(mapStateToProps,mapDispatchToProps)(App)

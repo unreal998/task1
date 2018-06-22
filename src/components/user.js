@@ -13,6 +13,8 @@ class User extends React.Component {
                 <div>
                     <div>
                         <p>User Name: {this.props.username}</p>
+                        <p>User Age: {this.props.userage}</p>
+                        <img src={this.props.userphoto}></img>
                     </div>
                 </div>
             </div>
