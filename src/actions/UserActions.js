@@ -13,7 +13,8 @@ export function UserData(){
                                 name: el.name.first,
                                 last: el.name.last,
                                 gender: el.gender,
-                                age: el.dob.age
+                                age: el.dob.age,
+                                email: el.email
                             }
                         })
                     })
@@ -22,4 +23,11 @@ export function UserData(){
             })
     }
 
+}
+export function UserName(){
+    return dispatch({
+        type: "USER_NAME",
+        name:"Vasia"
+    })
+    
 }

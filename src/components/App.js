@@ -1,6 +1,7 @@
 import React from "react";
-import User from "./User"
-import Main from "./Main"
+import User from "./User";
+import Main from "./Main";
+import Links from "./Links";
 import { connect } from 'react-redux';
 import { UserData} from "../actions/UserActions";
 class App extends React.Component{
@@ -10,9 +11,6 @@ class App extends React.Component{
     changeUsername(){
 
     }
-    // componentDidMount(){
-    //     this.currentData = changeUsername(()=> this.props.UserData())
-    // }
     componentDidMount(){
         this.props.UserData()
     }
@@ -20,8 +18,7 @@ class App extends React.Component{
         return(
             <div className="container">
                 <Main changeUsername={()=>this.props.UserData()}/>
-                <User username={this.props.user.name} userage={this.props.user.age} userphoto = {this.props.user.photo}/>
-               
+                <Links/>   
             </div>
         );
     }
@@ -29,7 +26,7 @@ class App extends React.Component{
 
 const mapStateToProps = (state) => {
     return{
-        user: state.user,
+        user: state.user
     };
 };
 
