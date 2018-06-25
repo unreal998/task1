@@ -4,6 +4,7 @@ import User from "./User";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import UserDetailInfo from "./UserDetailInfo";
+
 class UserInfo extends Component {
   render() {
     return (
