@@ -18,7 +18,11 @@ const userReducer = (state = initialState , action) => {
             tempState.gender = action.payload.gender,
             tempState.age = action.payload.age,
             tempState.photo = action.payload.photo,
-            tempState.email = action.payload.email
+            tempState.email = action.payload.email;
+            break;
+         case "USER_NAME":
+             tempState.name = action.name;
+             break;
     }
     return tempState;
 }

@@ -5,10 +5,10 @@ class Main extends React.Component {
         return (
             <div>
                     <div>
-                        <h1>The Main Page</h1>
+                       <h1>The Main Page</h1>
                     </div>
                     <div>
-                        <button onClick={() => this.props.changeUsername()}>Change the Username</button>
+                        <button onClick={() => this.props.changeUsername()}>Change the Userdata</button>
                     </div>
                     <Link to = "/user"><h1>The User Page</h1></Link>
             </div>

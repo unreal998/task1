@@ -23,11 +23,11 @@ export function UserData(){
             })
     }
 
-}
+};
 export function UserName(){
-    return dispatch({
+    return (dispatch) => dispatch ({
         type: "USER_NAME",
-        name:"Vasia"
-    })
+        name:"name"
+    });
     
 }
