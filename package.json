@@ -13,6 +13,7 @@
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
     "redux-promise-middleware": "^5.1.1",
+    "redux-saga": "^0.16.0",
     "sass-loader": "^7.0.3",
     "scss-loader": "0.0.1",
     "style-loader": "^0.21.0"
