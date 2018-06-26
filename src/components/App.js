@@ -1,5 +1,4 @@
 import React from "react";
-import User from "./User";
 import Main from "./Main";
 import Links from "./Links";
 import { connect } from 'react-redux';

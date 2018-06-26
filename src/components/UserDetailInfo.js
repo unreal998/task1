@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { UserData, UserName} from "../actions/UserActions";
-import User from "./User";
+import "../sass/User.sass";
 
 class UserDetailInfo extends Component {
     constructor(props){
-        super(props)
+        super(props);
     }
     render() {
         return (
-            <div>
+            <div className="userInfo-content">
             <img src={this.props.user.photo}></img>
             <p>Name:{this.props.user.title} {this.props.user.name} {this.props.user.last}</p>
             <p>Age:{this.props.user.age}</p>
             <p>Gender:{this.props.user.gender}</p>
             <p>{this.props.user.email}</p>
-            <input type="text" onClick={ ()=> this.props.UserName("Maks")} />
+            <input type="text" onChange={(event)=> this.props.UserName(event.target.value)} />
             </div>
         );
     }

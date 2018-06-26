@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWepbackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: ["babel-polyfill", "./src/index.js", './src/sass/style.sass'],
+    entry: ["babel-polyfill", "./src/index.js"],
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "App.js"
@@ -23,7 +23,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/,
+                test: /\.sass$/,
                 use: [
                   'style-loader',
                   'css-loader',

@@ -3,12 +3,13 @@ import { UserData} from "../actions/UserActions";
 import User from "./User";
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import UserDetailInfo from "./UserDetailInfo";
+import "../sass/User.sass";
 
 class UserInfo extends Component {
   render() {
     return (
-      <div>
+      <div className="userInfo-content">
+        <hr></hr>
         <User username={this.props.user.name} userage={this.props.user.age} userphoto = {this.props.user.photo}/>
         <Link to = "/userInfo"><h3>{this.props.user.name}</h3></Link>
       </div>

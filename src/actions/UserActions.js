@@ -24,10 +24,10 @@ export function UserData(){
     }
 
 };
-export function UserName(){
+export function UserName(name){
     return (dispatch) => dispatch ({
         type: "USER_NAME",
-        name:"name"
+        name:name
     });
     
 }

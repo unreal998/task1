@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import "../sass/Main.sass";
+
 class Main extends React.Component {
+    
     render() {
         return (
-            <div>
-                    <div>
-                       <h1>The Main Page</h1>
-                    </div>
-                    <div>
-                        <button onClick={() => this.props.changeUsername()}>Change the Userdata</button>
-                    </div>
-                    <Link to = "/user"><h1>The User Page</h1></Link>
+            <div className="main">
+                <h1>The Main Page</h1>
+                <button onClick={() => this.props.changeUsername()}>Change the Userdata</button>
+                <Link to = "/user"><h1>The User Page</h1></Link>
             </div>
             
         );

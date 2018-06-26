@@ -1,16 +1,11 @@
 import React from "react";
-
 class User extends React.Component {
     render() {
         return (
-            <div>
-                <div>
-                    <div>
-                        <p>User Name: {this.props.username} </p>
-                        <p>User Age: {this.props.userage}</p>
-                        <img src={this.props.userphoto}></img>
-                    </div>
-                </div>
+            <div className="user-content">
+                <img src={this.props.userphoto}></img>
+                <p>User Name: {this.props.username} </p>
+                <p>User Age: {this.props.userage}</p>
             </div>
         );
     }
