@@ -9,7 +9,6 @@ class UserInfo extends Component {
   render() {
     return (
       <div className="userInfo-content">
-        <hr></hr>
         <User username={this.props.user.name} userage={this.props.user.age} userphoto = {this.props.user.photo}/>
         <Link to = "/userInfo"><h3>{this.props.user.name}</h3></Link>
       </div>

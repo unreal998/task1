@@ -8,7 +8,7 @@ class Main extends React.Component {
         return (
             <div className="main">
                 <h1>The Main Page</h1>
-                <button onClick={() => this.props.changeUsername()}>Change the Userdata</button>
+                <button onClick={() => this.props.changeUsername()}>Change Userdata</button>
                 <Link to = "/user"><h1>The User Page</h1></Link>
             </div>
             

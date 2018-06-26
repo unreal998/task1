@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { UserData, UserName} from "../actions/UserActions";
 import "../sass/User.sass";
+import "../sass/UserDetailInfo.sass"
+
 
 class UserDetailInfo extends Component {
     constructor(props){
