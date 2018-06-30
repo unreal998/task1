@@ -23,6 +23,10 @@ const userReducer = (state = initialState , action) => {
          case "USER_NAME":
              tempState.name = action.name;
              break;
+         case "FETCH_USERS_SUCCESS":
+             console.log(action.payload);
+         case "FETCH_USERS":
+             console.log("action.payload");
     }
     return tempState;
 }
