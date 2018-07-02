@@ -10,13 +10,14 @@ class App extends React.Component{
     constructor(props){
         super(props);
     }
-    // componentDidMount(){
-    //     this.props.FetchUsers()
-    // }
+    componentDidMount(){
+        this.props.UserData()
+        
+    }
     render(){
         return(
             <div className="container">
-                <Main changeUsername={()=>this.props.FetchUsers()}/>
+                <Main changeUsername={()=>this.props.UserData()}/>
                 <Links/>   
             </div>
         );
