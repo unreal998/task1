@@ -10,14 +10,14 @@ class App extends React.Component{
     constructor(props){
         super(props);
     }
-    componentDidMount(){
-        this.props.UserData()
+     componentDidMount(){
+        this.props.FetchUsers()
         
     }
-    render(){
+     render(){
         return(
             <div className="container">
-                <Main changeUsername={()=>this.props.UserData()}/>
+                <Main changeUsername={()=>this.props.FetchUsers()}/>
                 <Links/>   
             </div>
         );
@@ -31,15 +31,14 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    console.log(UserInfo)
     return{
-        UserData: ()=>{
-            dispatch(UserData());
-        },
+        // UserData: ()=>{
+        //     dispatch(UserData());
+        // },
         FetchUsers: ()=>{
             dispatch(UserInfo());
         }
-    };
+    }; 
 };
 
 
