@@ -32,3 +32,8 @@ export function UserName(name){
     });
     
 }
+export function UserInfo (){
+    return {
+        type: "USER_INFO"
+    };
+}

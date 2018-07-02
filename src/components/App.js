@@ -2,8 +2,8 @@ import React from "react";
 import Main from "./Main";
 import Links from "./Links";
 import { connect } from 'react-redux';
-import { UserData} from "../actions/UserActions";
-import { fetchUsersWatcher } from "../saga/saga"
+import { UserData, UserInfo} from "../actions/UserActions";
+
 
 
 class App extends React.Component{
@@ -12,7 +12,7 @@ class App extends React.Component{
     }
     // componentDidMount(){
     //     this.props.FetchUsers()
-    //}
+    // }
     render(){
         return(
             <div className="container">
@@ -30,13 +30,13 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-    console.log(fetchUsersWatcher)
+    console.log(UserInfo)
     return{
         UserData: ()=>{
             dispatch(UserData());
         },
         FetchUsers: ()=>{
-            dispatch(fetchUsersWatcher());
+            dispatch(UserInfo());
         }
     };
 };
